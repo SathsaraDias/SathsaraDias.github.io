@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="description" content="Sathsara Dias — Applied mathematician and data scientist specializing in data-driven modeling, DMD, Koopman analysis, and predictive analytics for aerospace, oceanography, and AI.">
+    <meta name="author" content="Sathsara Dias">
+    <meta name="theme-color" content="#1d315a">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sathsara Dias - Applied Mathematician & Data Scientist">
+    <meta property="og:description" content="Reduced-order modeling, Dynamic Mode Decomposition (DMD), Koopman analysis, and predictive analytics for aerospace and oceanography.">
+    <meta property="og:image" content="./assets/img/user-2.jpg">
+    <meta property="og:url" content="https://www.diassl.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sathsara Dias - Applied Mathematician & Data Scientist">
+    <meta name="twitter:description" content="Reduced-order modeling, DMD, Koopman analysis, predictive analytics for aerospace and oceanography.">
+    
+    <title>Sathsara Dias</title>
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#about" class="brand-link">
+                    <img src="./assets/img/logo_sd.png" alt="SD Logo" class="navbar-logo-sd">
+                    <span class="brand-text">Sathsara Dias</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="#about" class="nav-link active">About me</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#talks" class="nav-link">Talks</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="row">
+                    <div class="col-profile">
+                        <div class="profile-card">
+                            <img src="./assets/img/SD_1.png" alt="Sathsara Dias" class="profile-avatar">
+                            <div class="profile-info">
+                                <h1>Sathsara Dias</h1>
+                                <h2>Applied Mathematician, Data Scientist, Machine Learning Engineer</h2>
+                            </div>
+                            <div class="profile-social">
+                                <a href="https://github.com/SathsaraDias" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/lsldias/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=MAXG9EUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="mailto:lsldias0521@gmail.com" aria-label="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-content">
+                        <h1>About me</h1>
+                        <div class="article-content">
+                            <p>I'm an applied mathematician and data scientist specializing in reduced-order modeling and advanced data-driven methods. My work focuses on developing custom Dynamic Mode Decomposition (DMD) frameworks for extracting dynamics and patterns from real-world scientific data, with particular attention to aerospace and oceanographic applications.</p>
+                            
+                            <p>I specialize in reduced-order modeling, Dynamic Mode Decomposition (DMD), Koopman analysis, POD, and predictive analytics for aerospace and oceanographic applications. My work bridges mathematics with machine learning, deep learning, and data science for impactful solutions in both research and industry.</p>
+
+                            <p>My broader aim is to advance how behavioral theories, methods, and interventions are developed by making them more data-driven, mathematically rigorous, and grounded in real-world applications, and to inspire innovation in applied mathematics, machine learning, and ultimately in scientific research itself.</p>
+
+                            <div class="about-buttons">
+                                <button class="btn-view-acknowledgements" onclick="openAcknowledgements()">View Acknowledgements</button>
+                            </div>
+
+                            <div class="row-details">
+                                <div class="detail-column">
+                                    <h3 class="section-subheading">Research Interests</h3>
+                                    <ul class="interests-list">
+                                        <li>Data-Driven Modeling</li>
+                                        <li>Machine Learning</li>
+                                        <li>Deep Learning</li>
+                                        <li>Time-Series Analysis</li>
+                                        <li>Scientific Computing</li>
+                                        <li>Computational Fluid Dynamics</li>
+                                        <li>Simulation and Modeling</li>
+                                        <li>Statistical Learning</li>
+                                        <li>Ocean Circulation</li>
+                                        <li>Weather Prediction</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-column">
+                                    <h3 class="section-subheading">Education</h3>
+                                    <ul class="education-list">
+                                        <li>
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div class="education-item">
+                                                <div class="course">Ph.D. in Mathematics, <span class="date">2024</span></div>
+                                                <div class="institution">Clarkson University, Potsdam, NY, USA</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div class="education-item">
+                                                <div class="course">M.Sc. in Mathematics, <span class="date">2020</span></div>
+                                                <div class="institution">Clarkson University, Potsdam, NY, USA</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div class="education-item">
+                                                <div class="course">M.Sc. in Industrial Mathematics, <span class="date">2013</span></div>
+                                                <div class="institution">University of Peradeniya, Sri Lanka</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div class="education-item">
+                                                <div class="course">B.Sc. in Physical Science</div>
+                                                <div class="institution">University of Colombo, Sri Lanka</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Awards and Honors & Certifications -->
+                            <div class="combined-section">
+                                <div class="awards-section">
+                                    <h3 class="section-subheading">Awards and Honors</h3>
+                                    <ul class="awards-list">
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">Best Oral Presentation Award</div>
+                                                <div class="award-org">MCCNNY 2022</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">SIAM Student Travel Award</div>
+                                                <div class="award-org">SIAM 2021</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">Audience Choice, Best Graduate Poster</div>
+                                                <div class="award-org">RAPS 2020</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">Best Poster Presentation Award</div>
+                                                <div class="award-org">MCCNNY 2020</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">IPAM Student Travel Award</div>
+                                                <div class="award-org">UCLA IPAM 2019</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-award"></i>
+                                            <div>
+                                                <div class="award-title">Inaugural Clarkson Ignite Fellow</div>
+                                                <div class="award-org">2019–2023</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="certifications-section">
+                                    <h3 class="section-subheading">Certifications and Training</h3>
+                                    <ul class="certifications-list">
+                                        <li>
+                                            <i class="fas fa-certificate"></i>
+                                            <div>
+                                                <div class="cert-title">SCJP: Sun Certified Programmer for Java 2 Platform, SE 5.0</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-certificate"></i>
+                                            <div>
+                                                <div class="cert-title">SCWCD: Sun Certified Web Component Developer for Java EE Platform</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-certificate"></i>
+                                            <div>
+                                                <div class="cert-title">GTA Boot Camp: Summer School for Teaching, SIGTA</div>
+                                                <div class="cert-org">Clarkson University (Undergrad STEM courses)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Publications -->
+            <section id="publications" class="section publications-section">
+                <div class="section-header">
+                    <h1>Featured Publications</h1>
+                </div>
+                <div class="publications-grid">
+                    <article class="publication-card publication-card-with-visualization">
+                        <div class="publication-meta">
+                            <div class="authors">Sathsara Dias, Sudam Surasinghe, K.G.D. Sulalitha Priyankara, Marko Budišić, Larry Pratt, Jose C. Sanchez-Garrido, Erik M. Bollt</div>
+                            <div class="publication-date">Online Publication: 07 Oct 2025 • Print Publication: 01 Oct 2025</div>
+                            <span class="pub-divider">•</span>
+                            <span class="pub-type">Journal Article</span>
+                        </div>
+                        <h2 class="publication-title">
+                            <a href="#publication-gibraltar">Analysis of Tidal Flows Through the Strait of Gibraltar Using Dynamic Mode Decomposition</a>
+                        </h2>
+                        <div class="publication-content-grid">
+                            <div class="publication-image">
+                                <img src="./assets/img/gibraltar_animation.gif" alt="Strait of Gibraltar tidal flow visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                            </div>
+                            <div class="publication-text">
+                                <p class="publication-abstract">The Strait of Gibraltar is a region characterized by intricate oceanic submesoscale features arising from the interplay of topography, tidal forcing, hydrodynamic instabilities, and strongly nonlinear internal hydraulic processes, all governed by the nonlinear equations of fluid motion. In this study, we aim to uncover the underlying physics of these phenomena as represented in the 3D Massachusetts Institute of Technology (MIT) General Circulation Model simulations, including simulated waves, eddies, and gyres. To achieve this, we employ dynamic mode decomposition (DMD) to break down simulation snapshots into Koopman modes, with distinct exponential growth/decay rates and oscillation frequencies. Our objectives encompass evaluating DMD's efficacy in capturing known features, unveiling new elements, ranking modes, and exploring order reduction. We also introduce modifications to enhance DMD's numerical accuracy and the robustness of its eigenvalues. DMD analysis yields a comprehensive understanding of flow patterns, internal wave formation, and the dynamics and meandering behaviors within the Strait of Gibraltar, the formation of the secondary western Alboran Gyre, and the propagation of Kelvin and coastal-trapped waves along the African coast. In doing so, it significantly advances our comprehension of intricate oceanographic phenomena and underscores the immense utility of DMD as an analytical tool for such complex datasets, suggesting that DMD could serve as a valuable addition to the toolkit of oceanographers.</p>
+                                <div class="publication-links">
+                                    <a href="https://arxiv.org/pdf/2311.01377" target="_blank" rel="noopener" class="btn-outline">PDF</a>
+                                    <a href="https://doi.org/10.1175/JPO-D-24-0196.1" target="_blank" rel="noopener" class="btn-outline">DOI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-card publication-card-with-visualization">
+                        <div class="publication-meta">
+                            <div class="authors">Sathsara Dias, Marko Budišić, Pat Piperni, Brian T. Helenbrook</div>
+                            <div class="publication-date">2024</div>
+                            <span class="pub-divider">•</span>
+                            <span class="pub-type">Journal Article</span>
+                        </div>
+                        <h2 class="publication-title">
+                            <a href="#publication-buffet">Identifying Buffet Oscillations Using Sliding-Window Dynamic Mode Decomposition</a>
+                        </h2>
+                        <div class="publication-content-grid">
+                            <div class="publication-image">
+                                <img src="./assets/img/airfoil_animation.gif" alt="Airfoil buffet oscillation visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                            </div>
+                            <div class="publication-text">
+                                <p class="publication-abstract">Buffet is a self-sustaining oscillation that can endanger an aircraft in transonic flight. Early automatic detection of the onset of buffet from simulation data is a necessary step in optimization algorithms used to design new aircraft geometries. We use the Dynamic Mode Decomposition (DMD) eigenvalues to detect the onset of buffet from transient simulations of the OAT15A airfoil across a range of angles of attack. During transients, different eigenvalues may be expressed at different times, and we process shorter segments of the data (sliding windows) in order to obtain robust, time-varying estimates of frequency of oscillation and decay/growth rates. We demonstrate that the onset of oscillation can be identified by analyzing DMD eigenvalues, and that physically different mechanisms of oscillation can additionally be identified from spatial profiles associated with DMD modes. The dominant buffeting modes can be detected through DMD before they become apparent in the physically relevant quantities, such as the coefficient of lift. We expect that such early detection of the onset of buffet could reduce the computational burden of aircraft design and expand the feasible design space.</p>
+                                <div class="publication-links">
+                                    <a href="https://doi.org/10.2514/1.J063929" target="_blank" rel="noopener" class="btn-outline">DOI</a>
+                                    <a href="https://engrxiv.org/preprint/view/3001/5513" target="_blank" rel="noopener" class="btn-outline">PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-card publication-card-with-visualization">
+                        <div class="publication-meta">
+                            <div class="authors">Sathsara Dias, Brian T. Helenbrook, Marko Budišić, Pat Piperni</div>
+                            <div class="publication-date">2025</div>
+                            <span class="pub-divider">•</span>
+                            <span class="pub-type">Journal Article</span>
+                        </div>
+                        <h2 class="publication-title">
+                            <a href="#publication-buffet-boundary">Identifying the Onset of Buffet Boundary Using Sliding-Window Dynamic Mode Decomposition</a>
+                        </h2>
+                        <div class="publication-content-grid">
+                            <div class="publication-image">
+                                <img src="./assets/img/buffet_boundary_animation.gif" alt="Buffet boundary onset visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                            </div>
+                            <div class="publication-text">
+                                <p class="publication-abstract">Transonic buffet, characterized by shock-induced oscillations, presents a significant challenge to aircraft stability and performance. This study developed a sensor based on Dynamic Mode Decomposition (DMD) to predict buffet onset by analyzing the aerodynamic characteristics of the OAT15A airfoil under varying flow conditions, including different Mach numbers, Reynolds numbers, and angles of attack. The sensor was developed using data from a simulation at a Reynolds number of $3 \times 10^6$, a Mach number of 0.73, and an angle of attack of 3.35. The sliding-window DMD approach was employed to accurately identify the Strouhal number associated with buffeting and the transitions in flow stability, leading to the determination of the buffet onset boundary for different flow conditions. This boundary was subsequently used to validate the sensor, resulting in the development of a robust buffet detection tool. The sensor can be integrated into the design cycle to monitor and dynamically adjust parameters, thereby preempting buffet conditions.</p>
+                                <div class="publication-links">
+                                    <span class="btn-outline">In Preparation (AIAA 2026)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-card publication-card-with-visualization">
+                        <div class="publication-meta">
+                            <div class="authors">K. P. S. C. Jayaratne and L. S. L. Dias</div>
+                            <div class="publication-date">Dec 20, 2013</div>
+                            <span class="pub-divider">•</span>
+                            <span class="pub-type">Conference Paper</span>
+                        </div>
+                        <h2 class="publication-title">
+                            <a href="#publication-lightning">Long-term Variation of Lightning Casualties in Sri Lanka: from 1958-2009</a>
+                        </h2>
+                        <p class="publication-venue"><strong>Conference:</strong> 6th International Programme Committee meeting and Scientific Seminar on SAARC STORM Field Experiments, Hotel Renuka, Colombo</p>
+                        <div class="publication-content-grid">
+                            <div class="publication-image">
+                                <img src="./assets/img/Lightning.png" alt="Lightning Casualties 1958-2009 infographic showing trend analysis and geospatial mapping" class="publication-visualization">
+                            </div>
+                            <div class="publication-text">
+                                <p class="publication-abstract">This study assessed the human risk associated with lightning and analyzed the long-term variation of lightning-related casualties in Sri Lanka. Given the lack of persistent nationwide data on lightning casualties, the research utilized a comprehensive review of newspaper articles archived in the Department of National Archives, covering incidents from 1958 to 2009. The study identified high-risk periods, regions, and the most common causes of casualties, with special attention to indoor and outdoor risk profiles. Findings revealed that the majority of casualties occurred outdoors, predominantly affecting those engaged in agricultural or outdoor activities, and that incidents were heavily concentrated within specific months of the year. The study highlighted the critical importance of lightning safety awareness, particularly for vulnerable populations, and recommended the implementation of improved data collection systems at the national and local levels to enhance disaster risk reduction programs.</p>
+                                <div class="publication-links">
+                                    <span class="btn-outline">Conference</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Talks Section -->
+            <section id="talks" class="section talks-section">
+                <div class="section-header">
+                    <h1>Conference Abstracts & Proceedings</h1>
+                </div>
+                <div class="talks-grid">
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type conference">Conference Program</span>
+                            <span class="talk-date">Feb 29, 2020</span>
+                        </div>
+                        <h2 class="talk-title">Analyzing the Transition to Buffeting of a 2D Airfoil using the Dynamic Mode Decomposition</h2>
+                        <p class="talk-venue">MCCNNY 2020 (Clarkson University)</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara Dias; Marko Budišić; Brian Helenbrook; Pat Piperni</p>
+                        <div class="talk-links">
+                            <a href="https://webspace.clarkson.edu/programs/mccnny/public_html/MCCNNY2020ConferenceProgram.pdf" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type poster">Poster</span>
+                            <span class="talk-date">Jul 27–31, 2020</span>
+                        </div>
+                        <h2 class="talk-title">Analyzing the Transition to Buffeting of a 2D Airfoil using the Dynamic Mode Decomposition</h2>
+                        <p class="talk-venue">SAMM 2020: Learning Models from Data (MPI Magdeburg)</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara Dias (speaker); co-authors: Marko Budišić, Pat Piperni, Brian Helenbrook</p>
+                        <div class="talk-links">
+                            <a href="https://indico3.mpi-magdeburg.mpg.de/event/7/contributions/177/" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type oral">Session H10.11</span>
+                            <span class="talk-date">Nov 22, 2020</span>
+                        </div>
+                        <h2 class="talk-title">Dynamic Mode Decomposition Uncovers Hidden Oceanographic Features Around the Strait of Gibraltar</h2>
+                        <p class="talk-venue">APS DFD 2020 — Geophysical Fluid Dynamics – Oceanographic</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara Dias; Sudam Surasinghe; Kanattha Priyankara; Erik Bollt; Marko Budišić; Larry Pratt; Jose Sanchez-Garrido</p>
+                        <div class="talk-links">
+                            <a href="https://meetings.aps.org/Meeting/DFD20/Session/H10.11" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type oral">Session K06.6</span>
+                            <span class="talk-date">Nov 23, 2020</span>
+                        </div>
+                        <h2 class="talk-title">Predicting the Onset of Shock-Induced Buffet Using Dynamic Mode Decomposition</h2>
+                        <p class="talk-venue">APS DFD 2020 — Nonlinear Dynamics – General</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara Dias; Marko Budišić; Brian Helenbrook; Pat Piperni</p>
+                        <div class="talk-links">
+                            <a href="https://meetings.aps.org/Meeting/DFD20/Session/K06.6" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type poster">Poster Session PP1</span>
+                            <span class="talk-date">Jun 2023</span>
+                        </div>
+                        <h2 class="talk-title">Tracking of Buffet Oscillations in Transient Simulations of a Transonic Airfoil Using Sliding-Window Dynamic Mode Decomposition</h2>
+                        <p class="talk-venue">SIAM DS23</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara L. Dias; Brian Helenbrook; Pat Piperni; Marko Budišić</p>
+                        <div class="talk-links">
+                            <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=128502" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type oral">Conference Program</span>
+                            <span class="talk-date">Mar 26, 2022</span>
+                        </div>
+                        <h2 class="talk-title">Sliding-Window Dynamic Mode Decomposition Approach to Tracking the Onset of a Buffet in a Transonic Airfoil</h2>
+                        <p class="talk-venue">MCCNNY 2022 (Clarkson University)</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara Dias; Brian Helenbrook; Pat Piperni; Marko Budišić</p>
+                        <div class="talk-links">
+                            <a href="https://webspace.clarkson.edu/programs/mccnny/public_html/MCCNNY2022ConferenceProgram.pdf" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="talk-card">
+                        <div class="talk-meta">
+                            <span class="talk-type oral">CP12 Data and Numerical Methods I (virtual)</span>
+                            <span class="talk-date">May 24, 2021</span>
+                        </div>
+                        <h2 class="talk-title">Predicting the Onset of Shock-Induced Buffeting Using Dynamic Mode Decomposition with Sliding Time Windows</h2>
+                        <p class="talk-venue">SIAM DS21</p>
+                        <p class="talk-authors"><strong>Authors:</strong> Sathsara L. Dias; Marko Budišić; Brian Helenbrook; Pat Piperni</p>
+                        <div class="talk-links">
+                            <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=115056" target="_blank" rel="noopener" class="btn-outline">Abstract</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section projects-section">
+                <div class="section-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h2 class="project-title">Deep Learning Applications</h2>
+                        <p class="project-description">Advanced deep learning models for scientific data analysis and pattern recognition.</p>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2 class="project-title">Artificial Intelligence Research</h2>
+                        <p class="project-description">Cutting-edge AI solutions for complex scientific problems in applied mathematics.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2 class="project-title">Robotics Systems</h2>
+                        <p class="project-description">Intelligent robotics systems with data-driven control and reduced-order modeling.</p>
+                        <div class="project-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Control Systems</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2 class="project-title">Skin Cancer AI Detection</h2>
+                        <p class="project-description">Machine learning models for early skin cancer detection using computer vision and deep learning techniques.</p>
+                        <div class="project-tags">
+                            <span class="tag">Healthcare AI</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2 class="project-title">Rainfall Forecasting System</h2>
+                        <p class="project-description">Data-driven short-term rainfall forecasting using artificial neural networks for hydrometeorological applications.</p>
+                        <div class="project-tags">
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Climate</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="section-header">
+                    <h1>Get In Touch</h1>
+                </div>
+                <div class="contact-content">
+                    <p>Let's collaborate on your next project or discuss research opportunities.</p>
+                    <div class="contact-links">
+                        <a href="mailto:lsldias0521@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>lsldias0521@gmail.com</span>
+                        </a>
+                        <a href="https://discord.com/users/diassl_0521" target="_blank" rel="noopener" class="contact-link">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                        <a href="skype:live:.cid.fff8c7c5413e6d7a?chat" class="contact-link">
+                            <i class="fab fa-skype"></i>
+                            <span>Skype</span>
+                        </a>
+                        <a href="https://calendly.com" target="_blank" rel="noopener" class="contact-link">
+                            <i class="fas fa-calendar"></i>
+                            <span>Book a Meeting</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sathsara Dias. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Acknowledgements Modal -->
+    <div id="acknowledgementsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeAcknowledgements()">&times;</span>
+            <h2>Acknowledgements</h2>
+            <div class="modal-body">
+                <p>I remain deeply indebted to my advisor, <strong>Dr. Marko Budišić</strong>, whose advice, wisdom, and unwavering support were instrumental in my academic development. His exceptional mentorship throughout my doctoral studies not only helped me mature as a mathematician but also enriched my entire journey as a scholar. I could not have hoped for a better guide.</p>
+                
+                <p>I am also profoundly grateful to my co-advisor, <strong>Dr. Brian Helenbrook</strong>, for his invaluable guidance, particularly during the critical final year of my Ph.D. His mentorship was as impactful as that of a primary advisor, and I am sincerely thankful for his contributions. I also extend my heartfelt thanks to my co-advisor, <strong>Dr. Pat Piperni</strong>, for generously sharing the NSU2D code, providing numerous research ideas, and guiding me through the technical intricacies of our projects.</p>
+                
+                <h3>In Memoriam: Dr. Erik M. Bollt</h3>
+                <p>I dedicate this section to the memory of the late <strong>Dr. Erik M. Bollt</strong>, a cherished member of my thesis committee and a visionary in the field of dynamical systems. Beyond his scientific brilliance, Erik was a source of constant encouragement and insightful discussion, particularly regarding the "Gibraltar" project. His sudden passing was a profound loss to the scientific community, but his legacy of kindness and intellectual curiosity continues to inspire those of us who had the privilege of knowing him.</p>
+                
+                <p>My gratitude extends to <strong>D. Mavriplis</strong> (University of Wyoming) for sharing the NSU2D code and assisting with its setup, and to oceanographers <strong>Dr. Larry Pratt</strong> and <strong>Dr. Jose Sanchez-Garrido</strong> for their collaboration—their data and insights allowed us to successfully apply our theories to the field of oceanography.</p>
+                
+                <p>I offer my sincere thanks to <strong>Dr. Joseph Skufca</strong> and the entire faculty and staff of the Clarkson University Mathematics Department for their support. A special note of gratitude goes to <strong>Dr. Kumudu Mallawa Arachchi</strong>, who taught me not only mathematics but also invaluable lessons in life; his motivation has always been a source of strength. I also thank my friend <strong>Dr. Sudam Surasinghe</strong>, who has been a pillar of support in countless ways since my arrival in the USA.</p>
+                
+                <p>Above all, I owe the deepest gratitude to my family. Their unwavering support and love have been the cornerstone of my success. My parents, <strong>Bandula and Rita Dias</strong>, are my greatest role models, having instilled in me the values of perseverance and dedication. My brother, <strong>Ranga Dias</strong>, and my sister-in-law, <strong>Lauren Dias</strong>, were instrumental in facilitating my journey to the USA, standing by me through every challenge. I also send my love to their two wonderful sons—my nephews—whose joy and energy bring so much light to our family. To my sister, <strong>Ridma Dias</strong>, thank you for being a constant source of strength. It is to them that I dedicate this work, for their belief in me has made all the difference.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
