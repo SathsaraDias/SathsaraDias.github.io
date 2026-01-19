@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="light-theme">
+<body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -48,11 +48,6 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon" id="themeIcon"></i>
-                </button>
-            </div>
         </div>
     </nav>
 
@@ -64,7 +59,7 @@
                 <div class="row">
                     <div class="col-profile">
                         <div class="profile-card">
-                            <img src="./assets/img/SD_1.png" alt="Sathsara Dias" class="profile-avatar">
+                            <img src="./assets/img/SD_1.png" alt="Sathsara Dias" class="profile-avatar" loading="eager">
                             <div class="profile-info">
                                 <h1>Sathsara Dias</h1>
                                 <h2>Applied Mathematician, Data Scientist, Machine Learning Engineer</h2>
@@ -247,7 +242,7 @@
                         </h2>
                         <div class="publication-content-grid">
                             <div class="publication-image">
-                                <img src="./assets/img/gibraltar_animation.gif" alt="Strait of Gibraltar tidal flow visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                                <img src="./assets/img/gibraltar_animation.gif" alt="Strait of Gibraltar tidal flow visualization using Dynamic Mode Decomposition" class="publication-visualization" loading="lazy">
                             </div>
                             <div class="publication-text">
                                 <p class="publication-abstract">The Strait of Gibraltar is a region characterized by intricate oceanic submesoscale features arising from the interplay of topography, tidal forcing, hydrodynamic instabilities, and strongly nonlinear internal hydraulic processes, all governed by the nonlinear equations of fluid motion. In this study, we aim to uncover the underlying physics of these phenomena as represented in the 3D Massachusetts Institute of Technology (MIT) General Circulation Model simulations, including simulated waves, eddies, and gyres. To achieve this, we employ dynamic mode decomposition (DMD) to break down simulation snapshots into Koopman modes, with distinct exponential growth/decay rates and oscillation frequencies. Our objectives encompass evaluating DMD's efficacy in capturing known features, unveiling new elements, ranking modes, and exploring order reduction. We also introduce modifications to enhance DMD's numerical accuracy and the robustness of its eigenvalues. DMD analysis yields a comprehensive understanding of flow patterns, internal wave formation, and the dynamics and meandering behaviors within the Strait of Gibraltar, the formation of the secondary western Alboran Gyre, and the propagation of Kelvin and coastal-trapped waves along the African coast. In doing so, it significantly advances our comprehension of intricate oceanographic phenomena and underscores the immense utility of DMD as an analytical tool for such complex datasets, suggesting that DMD could serve as a valuable addition to the toolkit of oceanographers.</p>
@@ -271,7 +266,7 @@
                         </h2>
                         <div class="publication-content-grid">
                             <div class="publication-image">
-                                <img src="./assets/img/airfoil_animation.gif" alt="Airfoil buffet oscillation visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                                <img src="./assets/img/airfoil_animation.gif" alt="Airfoil buffet oscillation visualization using Dynamic Mode Decomposition" class="publication-visualization" loading="lazy">
                             </div>
                             <div class="publication-text">
                                 <p class="publication-abstract">Buffet is a self-sustaining oscillation that can endanger an aircraft in transonic flight. Early automatic detection of the onset of buffet from simulation data is a necessary step in optimization algorithms used to design new aircraft geometries. We use the Dynamic Mode Decomposition (DMD) eigenvalues to detect the onset of buffet from transient simulations of the OAT15A airfoil across a range of angles of attack. During transients, different eigenvalues may be expressed at different times, and we process shorter segments of the data (sliding windows) in order to obtain robust, time-varying estimates of frequency of oscillation and decay/growth rates. We demonstrate that the onset of oscillation can be identified by analyzing DMD eigenvalues, and that physically different mechanisms of oscillation can additionally be identified from spatial profiles associated with DMD modes. The dominant buffeting modes can be detected through DMD before they become apparent in the physically relevant quantities, such as the coefficient of lift. We expect that such early detection of the onset of buffet could reduce the computational burden of aircraft design and expand the feasible design space.</p>
@@ -295,7 +290,7 @@
                         </h2>
                         <div class="publication-content-grid">
                             <div class="publication-image">
-                                <img src="./assets/img/buffet_boundary_animation.gif" alt="Buffet boundary onset visualization using Dynamic Mode Decomposition" class="publication-visualization">
+                                <img src="./assets/img/buffet_boundary_animation.gif" alt="Buffet boundary onset visualization using Dynamic Mode Decomposition" class="publication-visualization" loading="lazy">
                             </div>
                             <div class="publication-text">
                                 <p class="publication-abstract">Transonic buffet, characterized by shock-induced oscillations, presents a significant challenge to aircraft stability and performance. This study developed a sensor based on Dynamic Mode Decomposition (DMD) to predict buffet onset by analyzing the aerodynamic characteristics of the OAT15A airfoil under varying flow conditions, including different Mach numbers, Reynolds numbers, and angles of attack. The sensor was developed using data from a simulation at a Reynolds number of $3 \times 10^6$, a Mach number of 0.73, and an angle of attack of 3.35. The sliding-window DMD approach was employed to accurately identify the Strouhal number associated with buffeting and the transitions in flow stability, leading to the determination of the buffet onset boundary for different flow conditions. This boundary was subsequently used to validate the sensor, resulting in the development of a robust buffet detection tool. The sensor can be integrated into the design cycle to monitor and dynamically adjust parameters, thereby preempting buffet conditions.</p>
@@ -319,7 +314,7 @@
                         <p class="publication-venue"><strong>Conference:</strong> 6th International Programme Committee meeting and Scientific Seminar on SAARC STORM Field Experiments, Hotel Renuka, Colombo</p>
                         <div class="publication-content-grid">
                             <div class="publication-image">
-                                <img src="./assets/img/Lightning.png" alt="Lightning Casualties 1958-2009 infographic showing trend analysis and geospatial mapping" class="publication-visualization">
+                                <img src="./assets/img/Lightning.png" alt="Lightning Casualties 1958-2009 infographic showing trend analysis and geospatial mapping" class="publication-visualization" loading="lazy">
                             </div>
                             <div class="publication-text">
                                 <p class="publication-abstract">This study assessed the human risk associated with lightning and analyzed the long-term variation of lightning-related casualties in Sri Lanka. Given the lack of persistent nationwide data on lightning casualties, the research utilized a comprehensive review of newspaper articles archived in the Department of National Archives, covering incidents from 1958 to 2009. The study identified high-risk periods, regions, and the most common causes of casualties, with special attention to indoor and outdoor risk profiles. Findings revealed that the majority of casualties occurred outdoors, predominantly affecting those engaged in agricultural or outdoor activities, and that incidents were heavily concentrated within specific months of the year. The study highlighted the critical importance of lightning safety awareness, particularly for vulnerable populations, and recommended the implementation of improved data collection systems at the national and local levels to enhance disaster risk reduction programs.</p>
