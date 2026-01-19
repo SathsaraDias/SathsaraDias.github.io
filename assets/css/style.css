@@ -426,11 +426,11 @@ a:hover {
 }
 
 .interests-list li {
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
   color: var(--text-muted);
   position: relative;
   padding-left: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 0.95rem;
   font-weight: 600;
   overflow: visible;
@@ -440,10 +440,10 @@ a:hover {
   content: '•';
   position: absolute;
   left: 0;
-  top: 0.5em;
+  top: 0.45em;
   color: #ffffff;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1;
 }
 
@@ -1416,12 +1416,12 @@ a:hover {
   }
   
   .interests-list li {
-    padding: 0.35rem 0;
+    padding: 0.4rem 0;
     padding-left: 1.5rem;
     font-size: 0.9rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
+    line-height: 1.7;
+    display: block;
+    position: relative;
   }
   
   .interests-list li::before {
@@ -1429,6 +1429,7 @@ a:hover {
     font-size: 1em;
     position: absolute;
     left: 0;
+    line-height: 1;
   }
   
   .education-list li {
