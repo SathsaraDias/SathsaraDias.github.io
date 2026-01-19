@@ -1,37 +1,27 @@
 // Main JavaScript for Portfolio Website
 
+// Define Acknowledgements functions immediately (before DOMContentLoaded)
+window.openAcknowledgements = function() {
+    const modal = document.getElementById('acknowledgementsModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeAcknowledgements = function() {
+    const modal = document.getElementById('acknowledgementsModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
+
 (function() {
     'use strict';
 
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
-    
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        const isDark = body.classList.contains('dark-theme');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        
-        if (isDark) {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
-    });
 
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
@@ -140,22 +130,7 @@
     // Initialize
     updateActiveNav();
 
-    // Acknowledgements Modal Functions
-    window.openAcknowledgements = function() {
-        const modal = document.getElementById('acknowledgementsModal');
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-    };
-
-    window.closeAcknowledgements = function() {
-        const modal = document.getElementById('acknowledgementsModal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-    };
+    // Acknowledgements Modal Functions are already defined above (before this IIFE)
 
     // Close modal when clicking outside of it
     window.addEventListener('click', function(event) {
@@ -174,4 +149,4 @@
             }
         }
     });
-})();
+});
