@@ -426,24 +426,25 @@ a:hover {
 }
 
 .interests-list li {
-  padding: 0.3rem 0;
+  padding: 0.35rem 0;
   color: var(--text-muted);
   position: relative;
   padding-left: 1.5rem;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 0.95rem;
   font-weight: 600;
   overflow: visible;
+  min-height: 1.8em;
 }
 
 .interests-list li::before {
   content: '•';
   position: absolute;
   left: 0;
-  top: 0.45em;
+  top: 0.5em;
   color: #ffffff;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1;
 }
 
@@ -1214,7 +1215,14 @@ a:hover {
   }
   
   .interests-list li {
-    padding: 0.1rem 0;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  .interests-list li::before {
+    top: 0.6em;
+    font-size: 0.95em;
   }
   
   .course {
@@ -1416,20 +1424,22 @@ a:hover {
   }
   
   .interests-list li {
-    padding: 0.4rem 0;
+    padding: 0.5rem 0;
     padding-left: 1.5rem;
     font-size: 0.9rem;
-    line-height: 1.7;
+    line-height: 1.8;
     display: block;
     position: relative;
+    min-height: 1.8em;
   }
   
   .interests-list li::before {
-    top: 0.5em;
-    font-size: 1em;
+    top: 0.6em;
+    font-size: 0.95em;
     position: absolute;
     left: 0;
     line-height: 1;
+    transform: none;
   }
   
   .education-list li {
