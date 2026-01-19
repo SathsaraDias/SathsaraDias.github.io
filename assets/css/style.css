@@ -990,7 +990,7 @@ a:hover {
   padding: 0.35rem 0;
   border-bottom: none;
   margin-bottom: 0.15rem;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   min-width: 0;
 }
