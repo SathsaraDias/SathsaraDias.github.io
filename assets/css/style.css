@@ -1541,19 +1541,50 @@ a:hover {
     padding: 0;
   }
   
+  .detail-column:first-child {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .detail-column:last-child {
+    margin-bottom: 0;
+  }
+  
   .awards-list li,
   .education-list li,
   .certifications-list li {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: flex-start;
   }
   
   .education-list li {
-    padding: 0.35rem 0;
+    padding: 0.4rem 0;
+  }
+  
+  .education-list i {
+    margin-top: 0.2em;
+    font-size: 0.85rem;
+    line-height: 1;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .awards-list li,
+  .certifications-list li {
+    padding: 0.4rem 0;
+  }
+  
+  .awards-list i,
+  .certifications-list i {
+    margin-top: 0.2em;
+    font-size: 0.85rem;
+    line-height: 1;
+    align-self: flex-start;
+    flex-shrink: 0;
   }
   
   .experience-section {
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
     margin-bottom: 0;
   }
   
@@ -1577,6 +1608,20 @@ a:hover {
   .experience-org,
   .experience-date {
     text-align: left;
+  }
+  
+  .combined-section {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-light);
+  }
+  
+  .awards-section {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .certifications-section {
+    margin-top: 0;
   }
 }
 
