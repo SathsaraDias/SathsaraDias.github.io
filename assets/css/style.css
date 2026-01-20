@@ -298,8 +298,11 @@ a:hover {
   cursor: pointer;
   padding: 0.5rem;
   gap: 4px;
-  z-index: 1000;
+  z-index: 1001;
   position: relative;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-toggle span {
