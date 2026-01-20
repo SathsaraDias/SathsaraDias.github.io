@@ -1451,21 +1451,28 @@ a:hover {
   .education-list li {
     padding: 0.5rem 0;
     gap: 0.75rem;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .education-list i {
-    margin-top: 0;
+    margin-top: 0.2em;
     font-size: 0.85rem;
     line-height: 1;
-    align-self: center;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .awards-list li,
+  .certifications-list li {
+    align-items: flex-start;
   }
   
   .awards-list i,
   .certifications-list i {
-    margin-top: 0;
+    margin-top: 0.2em;
     line-height: 1;
-    align-self: center;
+    align-self: flex-start;
+    flex-shrink: 0;
   }
   
   .course {
