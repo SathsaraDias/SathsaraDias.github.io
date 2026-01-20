@@ -1660,9 +1660,17 @@ a:hover {
   }
   
   .awards-list i,
-  .certifications-list i,
+  .certifications-list i {
+    margin-top: 0.2em;
+    font-size: 0.85rem;
+    line-height: 1;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+  
   .experience-list i {
     margin-top: 0.2em;
+    font-size: 0.85rem;
     line-height: 1;
     align-self: flex-start;
     flex-shrink: 0;
