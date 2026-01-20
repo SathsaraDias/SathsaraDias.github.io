@@ -27,34 +27,55 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearEl.textContent = new Date().getFullYear();
     }
 
-    // Mobile Navigation Toggle
+    // Mobile Navigation Toggle - Use more direct approach
     const navToggle = document.getElementById('navToggle');
     const navbarNav = document.getElementById('navbarNav');
     
-    if (navToggle && navbarNav) {
-        navToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const isActive = navbarNav.classList.contains('active');
-            if (isActive) {
+    if (!navToggle || !navbarNav) {
+        console.error('Mobile menu elements not found');
+        return;
+    }
+    
+    // Use onclick attribute approach as fallback
+    navToggle.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        const isActive = navbarNav.classList.contains('active');
+        if (isActive) {
+            navbarNav.classList.remove('active');
+            navToggle.classList.remove('active');
+        } else {
+            navbarNav.classList.add('active');
+            navToggle.classList.add('active');
+        }
+        return false;
+    };
+    
+    // Also add event listener (both approaches)
+    navToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isActive = navbarNav.classList.contains('active');
+        if (isActive) {
+            navbarNav.classList.remove('active');
+            navToggle.classList.remove('active');
+        } else {
+            navbarNav.classList.add('active');
+            navToggle.classList.add('active');
+        }
+    }, true); // Use capture phase
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navbarNav.classList.contains('active')) {
+            if (!navToggle.contains(e.target) && !navbarNav.contains(e.target)) {
                 navbarNav.classList.remove('active');
                 navToggle.classList.remove('active');
-            } else {
-                navbarNav.classList.add('active');
-                navToggle.classList.add('active');
             }
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (navbarNav.classList.contains('active')) {
-                if (!navToggle.contains(e.target) && !navbarNav.contains(e.target)) {
-                    navbarNav.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
-            }
-        });
-    }
+        }
+    });
 
     // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll('.nav-link');
