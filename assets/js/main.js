@@ -17,6 +17,24 @@ window.closeAcknowledgements = function() {
     }
 };
 
+// Mobile menu toggle function - available immediately
+window.toggleMobileMenu = function() {
+    const navbarNav = document.getElementById('navbarNav');
+    const navToggle = document.getElementById('navToggle');
+    
+    if (navbarNav && navToggle) {
+        const isActive = navbarNav.classList.contains('active');
+        if (isActive) {
+            navbarNav.classList.remove('active');
+            navToggle.classList.remove('active');
+        } else {
+            navbarNav.classList.add('active');
+            navToggle.classList.add('active');
+        }
+    }
+    return false;
+};
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
