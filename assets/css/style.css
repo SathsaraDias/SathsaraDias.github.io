@@ -691,6 +691,16 @@ a:hover {
   width: 100%;
   content-visibility: auto;
   contain-intrinsic-size: 600px 400px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.publication-visualization.image-loading {
+  opacity: 0.7;
+}
+
+.publication-visualization.image-loaded {
+  opacity: 1;
 }
 
 .publication-text {

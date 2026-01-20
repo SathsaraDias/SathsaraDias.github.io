@@ -149,4 +149,35 @@ window.closeAcknowledgements = function() {
             }
         }
     });
+
+    // Optimize image loading with Intersection Observer for better lazy loading
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    // Force decode for better performance
+                    if (img.decode) {
+                        img.decode().catch(() => {
+                            // If decode fails, just load normally
+                        });
+                    }
+                    // Add a class when image is loading
+                    img.classList.add('image-loading');
+                    img.onload = () => {
+                        img.classList.remove('image-loading');
+                        img.classList.add('image-loaded');
+                    };
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px' // Start loading 50px before image comes into view
+        });
+
+        // Observe all lazy-loaded images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
 });
