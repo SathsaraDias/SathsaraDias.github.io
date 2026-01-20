@@ -1553,8 +1553,12 @@ a:hover {
   }
   
   .experience-section {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
     margin-bottom: 0;
+  }
+  
+  .experience-section .section-subheading {
+    margin-top: 0;
   }
   
   .experience-list li {
