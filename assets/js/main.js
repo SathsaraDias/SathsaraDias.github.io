@@ -43,6 +43,43 @@ window.closeAcknowledgements = function() {
         });
     });
 
+    // Dropdown menu functionality
+    const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Toggle active state
+            dropdownItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            item.classList.toggle('active');
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-item-dropdown')) {
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+
+    // Handle dropdown link clicks
+    const dropdownLinks = document.querySelectorAll('.nav-dropdown-link');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            navbarNav.classList.remove('active');
+            navToggle.classList.remove('active');
+        });
+    });
+
     // Active navigation link on scroll
     const sections = document.querySelectorAll('.section');
     const navLinksList = document.querySelectorAll('.nav-link');

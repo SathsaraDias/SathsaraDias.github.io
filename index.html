@@ -45,8 +45,13 @@
             </button>
             <ul class="navbar-nav" id="navbarNav">
                 <li><a href="#about" class="nav-link active">About me</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#conference-papers" class="nav-link">Conference Papers</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#publications" class="nav-link">Publications <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="#featured-publications" class="nav-dropdown-link">Featured Publications</a></li>
+                        <li><a href="#conference-papers" class="nav-dropdown-link">Conference Papers</a></li>
+                    </ul>
+                </li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -226,11 +231,13 @@
                 </div>
             </section>
 
-            <!-- Featured Publications -->
+            <!-- Publications Section -->
             <section id="publications" class="section publications-section">
-                <div class="section-header">
-                    <h1>Featured Publications</h1>
-                </div>
+                <!-- Featured Publications -->
+                <div id="featured-publications" class="publication-subsection">
+                    <div class="section-header">
+                        <h1>Featured Publications</h1>
+                    </div>
                 <div class="publications-grid">
                     <article class="publication-card publication-card-with-visualization">
                         <div class="publication-meta">
@@ -304,14 +311,14 @@
                     </article>
 
                 </div>
-            </section>
-
-            <!-- Conference Papers, Abstracts & Proceedings Section -->
-            <section id="conference-papers" class="section talks-section">
-                <div class="section-header">
-                    <h1>Conference Papers, Abstracts & Proceedings</h1>
                 </div>
-                <div class="talks-grid">
+
+                <!-- Conference Papers, Abstracts & Proceedings -->
+                <div id="conference-papers" class="publication-subsection">
+                    <div class="section-header">
+                        <h1>Conference Papers, Abstracts & Proceedings</h1>
+                    </div>
+                    <div class="talks-grid">
                     <article class="talk-card">
                         <div class="talk-meta">
                             <span class="talk-type poster">Poster Session PP1</span>
@@ -415,6 +422,7 @@
                             <span class="btn-outline">Conference</span>
                         </div>
                     </article>
+                    </div>
                 </div>
             </section>
 
