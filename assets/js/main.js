@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearEl.textContent = new Date().getFullYear();
     }
 
-    // Mobile Navigation Toggle - Use more direct approach
+    // Mobile Navigation Toggle - Multiple approaches for maximum compatibility
     const navToggle = document.getElementById('navToggle');
     const navbarNav = document.getElementById('navbarNav');
     
@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // Use onclick attribute approach as fallback
-    navToggle.onclick = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        
+    // Function to toggle menu
+    function toggleMenu(e) {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
         const isActive = navbarNav.classList.contains('active');
         if (isActive) {
             navbarNav.classList.remove('active');
@@ -69,21 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.classList.add('active');
         }
         return false;
-    };
+    }
     
-    // Also add event listener (both approaches)
-    navToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const isActive = navbarNav.classList.contains('active');
-        if (isActive) {
-            navbarNav.classList.remove('active');
-            navToggle.classList.remove('active');
-        } else {
-            navbarNav.classList.add('active');
-            navToggle.classList.add('active');
-        }
-    }, true); // Use capture phase
+    // Multiple event handlers for maximum compatibility
+    navToggle.onclick = toggleMenu;
+    navToggle.addEventListener('click', toggleMenu, false);
+    navToggle.addEventListener('touchend', toggleMenu, false);
     
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
