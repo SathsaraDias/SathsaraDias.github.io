@@ -266,6 +266,7 @@ a:hover {
 
 .section-header {
   margin-bottom: var(--spacing-lg);
+  padding-left: 0.5rem;
 }
 
 /* About Section */
