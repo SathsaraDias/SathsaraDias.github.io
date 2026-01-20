@@ -1432,8 +1432,11 @@ a:hover {
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
-    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
   }
   
   .navbar-nav.active {
