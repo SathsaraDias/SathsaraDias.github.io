@@ -499,7 +499,8 @@ a:hover {
   content: '•';
   position: absolute;
   left: 0;
-  top: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
   color: #ffffff;
   font-weight: bold;
   font-size: 1em;
@@ -1369,7 +1370,8 @@ a:hover {
   }
   
   .interests-list li::before {
-    top: 0.6em;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 0.95em;
   }
   
@@ -1608,12 +1610,12 @@ a:hover {
   }
   
   .interests-list li::before {
-    top: 0.6em;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 0.95em;
     position: absolute;
     left: 0;
     line-height: 1;
-    transform: none;
   }
   
   .education-list li {
