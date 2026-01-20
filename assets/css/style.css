@@ -298,6 +298,8 @@ a:hover {
   cursor: pointer;
   padding: 0.5rem;
   gap: 4px;
+  z-index: 1000;
+  position: relative;
 }
 
 .nav-toggle span {
@@ -305,6 +307,19 @@ a:hover {
   height: 3px;
   background-color: #ffffff;
   transition: var(--transition);
+  display: block;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 

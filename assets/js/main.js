@@ -27,8 +27,10 @@ window.closeAcknowledgements = function() {
     const navToggle = document.getElementById('navToggle');
     const navbarNav = document.getElementById('navbarNav');
     
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
+    if (navToggle && navbarNav) {
+        navToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             navbarNav.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
