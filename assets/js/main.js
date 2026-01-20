@@ -28,11 +28,27 @@ window.closeAcknowledgements = function() {
     const navbarNav = document.getElementById('navbarNav');
     
     if (navToggle && navbarNav) {
-        navToggle.addEventListener('click', (e) => {
+        navToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            navbarNav.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            const isActive = navbarNav.classList.contains('active');
+            if (isActive) {
+                navbarNav.classList.remove('active');
+                navToggle.classList.remove('active');
+            } else {
+                navbarNav.classList.add('active');
+                navToggle.classList.add('active');
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navbarNav.classList.contains('active')) {
+                if (!navToggle.contains(e.target) && !navbarNav.contains(e.target)) {
+                    navbarNav.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            }
         });
     }
 
