@@ -1619,19 +1619,18 @@ a:hover {
   }
   
   .interests-list li {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     padding-left: 1.5rem;
     font-size: 0.9rem;
-    line-height: 1.8;
+    line-height: 1.7;
     display: block;
     position: relative;
-    min-height: 1.8em;
+    min-height: 1.7em;
   }
   
   .interests-list li::before {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.95em;
+    top: 0.85em;
+    font-size: 1em;
     position: absolute;
     left: 0;
     line-height: 1;
