@@ -1543,8 +1543,7 @@ a:hover {
   
   .awards-list li,
   .education-list li,
-  .certifications-list li,
-  .experience-list li {
+  .certifications-list li {
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -1553,8 +1552,27 @@ a:hover {
     padding: 0.35rem 0;
   }
   
+  .experience-section {
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+  }
+  
   .experience-list li {
-    padding: 0.35rem 0;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.4rem 0;
+  }
+  
+  .experience-item {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .experience-title,
+  .experience-org,
+  .experience-date {
+    text-align: left;
   }
 }
 
