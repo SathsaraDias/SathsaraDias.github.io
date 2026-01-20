@@ -17,21 +17,30 @@ window.closeAcknowledgements = function() {
     }
 };
 
-(function() {
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
     // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const currentYearEl = document.getElementById('currentYear');
+    if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+    }
 
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
     const navbarNav = document.getElementById('navbarNav');
     
+    console.log('Nav toggle:', navToggle);
+    console.log('Navbar nav:', navbarNav);
+    
     if (navToggle && navbarNav) {
         navToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log('Toggle clicked');
             const isActive = navbarNav.classList.contains('active');
+            console.log('Is active:', isActive);
             if (isActive) {
                 navbarNav.classList.remove('active');
                 navToggle.classList.remove('active');
@@ -50,6 +59,8 @@ window.closeAcknowledgements = function() {
                 }
             }
         });
+    } else {
+        console.error('Mobile menu elements not found!');
     }
 
     // Close mobile menu when clicking a link
@@ -235,4 +246,4 @@ window.closeAcknowledgements = function() {
             imageObserver.observe(img);
         });
     }
-});
+}); // End of DOMContentLoaded
