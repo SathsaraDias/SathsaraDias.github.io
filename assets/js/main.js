@@ -31,16 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navbarNav = document.getElementById('navbarNav');
     
-    console.log('Nav toggle:', navToggle);
-    console.log('Navbar nav:', navbarNav);
-    
     if (navToggle && navbarNav) {
         navToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Toggle clicked');
             const isActive = navbarNav.classList.contains('active');
-            console.log('Is active:', isActive);
             if (isActive) {
                 navbarNav.classList.remove('active');
                 navToggle.classList.remove('active');
@@ -59,8 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    } else {
-        console.error('Mobile menu elements not found!');
     }
 
     // Close mobile menu when clicking a link
