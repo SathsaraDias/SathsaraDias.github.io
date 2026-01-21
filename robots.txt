@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://www.diassl.com/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 1
