@@ -5,10 +5,10 @@
 
 /* CSS Variables */
 :root {
-  /* Colors - Dark Blue Theme */
-  --primary: #1d315a;
-  --primary-dark: #152542;
-  --primary-light: #2a4a7a;
+  /* Colors - Dark Blue Theme (matching logo blue) */
+  --primary: #1c2c5c;
+  --primary-dark: #141f42;
+  --primary-light: #273a6e;
   --accent: #ffd700;
   --accent-light: #ffeb3b;
   
