@@ -1546,6 +1546,7 @@ a:hover {
   
   .talks-grid {
     grid-template-columns: 1fr;
+    padding: 0 var(--spacing-sm);
   }
   
   .talk-meta {
