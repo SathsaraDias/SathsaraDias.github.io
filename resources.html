@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="description" content="Resources — Books, datasets, tools, and software recommendations by Sathsara Dias">
+    <meta name="author" content="Sathsara Dias">
+    <meta name="theme-color" content="#1d315a">
+    
+    <title>Resources — Sathsara Dias</title>
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="./assets/img/logo_sd.png" alt="SD Logo" class="navbar-logo-sd">
+                    <span class="brand-text">Sathsara Dias</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About me</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#publications" class="nav-link">Publications <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="index.html#featured-publications" class="nav-dropdown-link">Featured Publications</a></li>
+                        <li><a href="index.html#conference-papers" class="nav-dropdown-link">Conference Papers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="research-notes.html" class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="research-notes.html" class="nav-dropdown-link">Research Notes</a></li>
+                        <li><a href="tutorials.html" class="nav-dropdown-link">Tutorials</a></li>
+                        <li><a href="resources.html" class="nav-dropdown-link active">Resources</a></li>
+                        <li><a href="resources.html#books" class="nav-dropdown-link">Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="section">
+                <h1 class="section-title">Resources</h1>
+                <p class="section-description">Curated collection of books, datasets, tools, software, and useful resources for data-driven analysis, reduced-order modeling, and scientific computing.</p>
+
+                <!-- Books Section -->
+                <section id="books" class="resources-section">
+                    <h2 class="section-subheading"><i class="fas fa-book"></i> Books & Reading Lists</h2>
+                    <div class="placeholder-content">
+                        <p><i class="fas fa-info-circle"></i> Content coming soon. Add your book recommendations, reviews, and reading lists here.</p>
+                        <div class="content-preview">
+                            <h3>Categories to organize:</h3>
+                            <ul>
+                                <li>Reduced-order modeling</li>
+                                <li>Data-driven methods</li>
+                                <li>Machine learning</li>
+                                <li>Scientific computing</li>
+                                <li>Fluid dynamics</li>
+                                <li>Mathematical methods</li>
+                            </ul>
+                            <p class="note">You can add book covers, ratings, short reviews, and links to purchase/read.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Datasets Section -->
+                <section id="datasets" class="resources-section">
+                    <h2 class="section-subheading"><i class="fas fa-database"></i> Datasets & Sample Data</h2>
+                    <div class="placeholder-content">
+                        <p><i class="fas fa-info-circle"></i> Content coming soon. Add links to datasets, sample data downloads, and data repositories here.</p>
+                        <div class="content-preview">
+                            <h3>Dataset categories:</h3>
+                            <ul>
+                                <li>Flow simulation data</li>
+                                <li>Time-series datasets</li>
+                                <li>Benchmark problems</li>
+                                <li>Educational datasets</li>
+                                <li>Links to external repositories</li>
+                            </ul>
+                            <p class="note">Include descriptions, download links, and usage examples for each dataset.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools & Software Section -->
+                <section id="tools" class="resources-section">
+                    <h2 class="section-subheading"><i class="fas fa-tools"></i> Tools & Software</h2>
+                    <div class="placeholder-content">
+                        <p><i class="fas fa-info-circle"></i> Content coming soon. Add your recommended tools, software, and libraries here.</p>
+                        <div class="content-preview">
+                            <h3>Tool categories:</h3>
+                            <ul>
+                                <li>Python libraries (NumPy, SciPy, PyDMD, etc.)</li>
+                                <li>MATLAB toolboxes</li>
+                                <li>Visualization tools</li>
+                                <li>Data processing software</li>
+                                <li>Development environments</li>
+                                <li>Useful online tools</li>
+                            </ul>
+                            <p class="note">Include brief descriptions, use cases, and links to documentation or download pages.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sample Code Repository Section -->
+                <section id="code-repo" class="resources-section">
+                    <h2 class="section-subheading"><i class="fab fa-github"></i> Sample Code Repository</h2>
+                    <div class="placeholder-content">
+                        <p><i class="fas fa-info-circle"></i> Content coming soon. Add links to your code repositories, GitHub repos, and code samples here.</p>
+                        <div class="content-preview">
+                            <h3>Code repository ideas:</h3>
+                            <ul>
+                                <li>GitHub repositories</li>
+                                <li>Code snippets and examples</li>
+                                <li>Tutorial code</li>
+                                <li>Utility functions</li>
+                                <li>Demonstration scripts</li>
+                            </ul>
+                            <p class="note">Link to your GitHub profile or specific repositories with descriptions and tags.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sathsara Dias. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

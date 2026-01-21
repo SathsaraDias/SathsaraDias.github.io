@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="description" content="Research Notes — DMD, POD, Data Science methods, code samples, and interactive demos by Sathsara Dias">
+    <meta name="author" content="Sathsara Dias">
+    <meta name="theme-color" content="#1d315a">
+    
+    <title>Research Notes — Sathsara Dias</title>
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="./assets/img/logo_sd.png" alt="SD Logo" class="navbar-logo-sd">
+                    <span class="brand-text">Sathsara Dias</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About me</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#publications" class="nav-link">Publications <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="index.html#featured-publications" class="nav-dropdown-link">Featured Publications</a></li>
+                        <li><a href="index.html#conference-papers" class="nav-dropdown-link">Conference Papers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="research-notes.html" class="nav-link active">Research <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="research-notes.html" class="nav-dropdown-link">Research Notes</a></li>
+                        <li><a href="tutorials.html" class="nav-dropdown-link">Tutorials</a></li>
+                        <li><a href="resources.html" class="nav-dropdown-link">Resources</a></li>
+                        <li><a href="resources.html#books" class="nav-dropdown-link">Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="research-page-layout">
+                <!-- Sidebar Navigation -->
+                <aside class="research-sidebar">
+                    <h3>Topics</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#dmd" class="sidebar-link active">DMD Methods</a></li>
+                        <li><a href="#pod" class="sidebar-link">POD Techniques</a></li>
+                        <li><a href="#data-science" class="sidebar-link">Data Science</a></li>
+                        <li><a href="#sample-code" class="sidebar-link">Sample Code</a></li>
+                        <li><a href="#demos" class="sidebar-link">Interactive Demos</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="research-content">
+                    <div class="section">
+                        <h1 class="section-title">Research Notes</h1>
+                        <p class="section-description">Notes, tutorials, code samples, and interactive demonstrations of methods and techniques in reduced-order modeling, data-driven analysis, and machine learning.</p>
+
+                        <!-- DMD Methods Section -->
+                        <section id="dmd" class="research-section">
+                            <h2 class="section-subheading">Dynamic Mode Decomposition (DMD)</h2>
+                            <div class="placeholder-content">
+                                <p><i class="fas fa-info-circle"></i> Content coming soon. Add your DMD notes, methods, and implementations here.</p>
+                                <div class="content-preview">
+                                    <h3>Topics to cover:</h3>
+                                    <ul>
+                                        <li>Classical DMD algorithm</li>
+                                        <li>Optimized DMD</li>
+                                        <li>Compressed DMD</li>
+                                        <li>Multi-resolution DMD</li>
+                                        <li>Time-delay DMD</li>
+                                        <li>Code samples and examples</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- POD Techniques Section -->
+                        <section id="pod" class="research-section">
+                            <h2 class="section-subheading">Proper Orthogonal Decomposition (POD)</h2>
+                            <div class="placeholder-content">
+                                <p><i class="fas fa-info-circle"></i> Content coming soon. Add your POD techniques and implementations here.</p>
+                                <div class="content-preview">
+                                    <h3>Topics to cover:</h3>
+                                    <ul>
+                                        <li>POD basics and theory</li>
+                                        <li>Snapshots method</li>
+                                        <li>Galerkin projection</li>
+                                        <li>POD-ROM applications</li>
+                                        <li>Code implementations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Data Science Section -->
+                        <section id="data-science" class="research-section">
+                            <h2 class="section-subheading">Data Science & Machine Learning</h2>
+                            <div class="placeholder-content">
+                                <p><i class="fas fa-info-circle"></i> Content coming soon. Add your data science methods and techniques here.</p>
+                                <div class="content-preview">
+                                    <h3>Topics to cover:</h3>
+                                    <ul>
+                                        <li>Time-series analysis</li>
+                                        <li>Statistical learning</li>
+                                        <li>Predictive analytics</li>
+                                        <li>Deep learning applications</li>
+                                        <li>Best practices and tips</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Sample Code Section -->
+                        <section id="sample-code" class="research-section">
+                            <h2 class="section-subheading">Sample Code & Implementations</h2>
+                            <div class="placeholder-content">
+                                <p><i class="fas fa-info-circle"></i> Content coming soon. Add your code samples, GitHub links, and implementations here.</p>
+                                <div class="content-preview">
+                                    <h3>Code samples to add:</h3>
+                                    <ul>
+                                        <li>DMD implementations (MATLAB, Python)</li>
+                                        <li>POD routines</li>
+                                        <li>Data processing scripts</li>
+                                        <li>Visualization tools</li>
+                                        <li>Utility functions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Interactive Demos Section -->
+                        <section id="demos" class="research-section">
+                            <h2 class="section-subheading">Interactive Demos</h2>
+                            <div class="placeholder-content">
+                                <p><i class="fas fa-info-circle"></i> Content coming soon. Embed interactive demos, Jupyter notebooks, or visualization tools here.</p>
+                                <div class="content-preview">
+                                    <h3>Demo ideas:</h3>
+                                    <ul>
+                                        <li>Interactive DMD demonstrations</li>
+                                        <li>Flow visualization tools</li>
+                                        <li>Parameter exploration tools</li>
+                                        <li>Jupyter notebook embeds</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sathsara Dias. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
