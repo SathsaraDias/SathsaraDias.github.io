@@ -177,28 +177,38 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // First, remove all active states
+        // First, remove all active states from all nav links
         navLinksList.forEach(link => {
             link.classList.remove('active');
         });
 
-        // Update active states for main nav links
+        let activeLinkFound = false;
+
+        // Update active states for main nav links - only one should be active
         navLinksList.forEach(link => {
+            if (activeLinkFound) return; // Stop after finding the active link
+            
             const href = link.getAttribute('href');
             
-            // Handle Home link
-            if (isHomePage && !hash && (href === '/' || href === '/index.html' || href === 'index.html')) {
-                // Only activate Home if we're at the top of the page or in about section
-                if (scrollY < 200 || current === 'about' || current === '') {
-                    link.classList.add('active');
-                    return; // Exit early to prevent other matches
+            // Handle Home link - only on homepage with no hash
+            if (isHomePage && !hash && !activeLinkFound) {
+                if (href === '/' || href === '/index.html' || href === 'index.html') {
+                    // Only activate Home if we're at the top of the page or in about section
+                    if (scrollY < 200 || current === 'about' || current === '') {
+                        link.classList.add('active');
+                        activeLinkFound = true;
+                        return;
+                    }
                 }
             }
             
-            // Handle section links with hash
-            if (current && (href === `/#${current}` || href === `#${current}`)) {
-                link.classList.add('active');
-                return;
+            // Handle section links with hash - check exact match
+            if (current && !activeLinkFound) {
+                if (href === `/#${current}` || href === `#${current}`) {
+                    link.classList.add('active');
+                    activeLinkFound = true;
+                    return;
+                }
             }
         });
 
