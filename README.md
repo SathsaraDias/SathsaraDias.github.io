@@ -143,6 +143,18 @@ The website is ready to deploy to any static hosting service:
 
 Just upload all files to your hosting service.
 
-## License
+## License & Template Usage
 
-© 2024 Sathsara Dias. All rights reserved.
+© 2024-2025 Sathsara Dias. All rights reserved.
+
+**This is my personal portfolio website.** However, you are welcome to use this as a template for your own portfolio! See `LICENSE.md` and `TEMPLATE_README.md` for details on using this template.
+
+## Using This Template
+
+This website template is available for others to use. Feel free to:
+- Clone or fork this repository
+- Modify the code for your own portfolio
+- Customize colors, content, and styling
+- Deploy to your own hosting
+
+See `TEMPLATE_README.md` for a complete guide on using this template.

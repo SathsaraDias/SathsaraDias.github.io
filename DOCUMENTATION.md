@@ -746,7 +746,7 @@ Edit navigation in all HTML files:
 - **Website**: https://www.diassl.com
 - **GitHub**: https://github.com/SathsaraDias
 - **LinkedIn**: https://www.linkedin.com/in/lsldias/
-- **Google Scholar**: https://scholar.google.com/citations?user=MAXG9EUAAAAJ&hl=en
+- **Google Scholar**: https://scholar.google.com/citations?hl=en&tzom=-330&user=iV9RTLMAAAAJ
 
 ### Contact
 - **Email**: lsldias0521@gmail.com
