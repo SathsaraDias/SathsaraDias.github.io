@@ -148,12 +148,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active navigation link on scroll and URL hash
     const sections = document.querySelectorAll('.section');
-    const navLinksList = document.querySelectorAll('.nav-link');
+    // Only select nav-links in navbar-nav, exclude brand-link
+    const navLinksList = document.querySelectorAll('.navbar-nav .nav-link');
 
     function updateActiveNav() {
         let current = '';
         const scrollY = window.pageYOffset;
         const hash = window.location.hash.replace('#', '');
+        const pathname = window.location.pathname;
+
+        // Check if we're on homepage (no pathname or just /)
+        const isHomePage = pathname === '/' || pathname === '/index.html' || pathname.endsWith('/index.html');
 
         // Check if we have a hash in URL
         if (hash) {
@@ -161,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (hashSection) {
                 current = hash;
             }
-        } else {
-            // Otherwise, check scroll position
+        } else if (isHomePage) {
+            // On homepage with no hash, check scroll position
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
                 const sectionHeight = section.clientHeight;
@@ -172,32 +177,52 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Update active states
+        // First, remove all active states
         navLinksList.forEach(link => {
             link.classList.remove('active');
+        });
+
+        // Update active states for main nav links
+        navLinksList.forEach(link => {
             const href = link.getAttribute('href');
-            if (href === `/#${current}` || href === `#${current}` || (current === '' && (href === '/' || href === '/index.html'))) {
+            
+            // Handle Home link
+            if (isHomePage && !hash && (href === '/' || href === '/index.html' || href === 'index.html')) {
+                // Only activate Home if we're at the top of the page or in about section
+                if (scrollY < 200 || current === 'about' || current === '') {
+                    link.classList.add('active');
+                    return; // Exit early to prevent other matches
+                }
+            }
+            
+            // Handle section links with hash
+            if (current && (href === `/#${current}` || href === `#${current}`)) {
                 link.classList.add('active');
+                return;
             }
         });
 
-        // Also handle dropdown parent links
+        // Handle dropdown parent links and children
         const dropdownParents = document.querySelectorAll('.nav-item-dropdown > .nav-link');
         dropdownParents.forEach(parent => {
             const dropdown = parent.closest('.nav-item-dropdown');
             const dropdownLinks = dropdown.querySelectorAll('.nav-dropdown-link');
             let hasActiveChild = false;
+            
             dropdownLinks.forEach(child => {
+                child.classList.remove('active');
                 const childHref = child.getAttribute('href');
-                if (childHref && childHref.includes(`#${current}`)) {
+                if (childHref && current && childHref.includes(`#${current}`)) {
                     child.classList.add('active');
                     hasActiveChild = true;
-                } else {
-                    child.classList.remove('active');
                 }
             });
-            if (hasActiveChild) {
+            
+            // Only make parent active if it has an active child AND we're not on home
+            if (hasActiveChild && current) {
                 parent.classList.add('active');
+            } else {
+                parent.classList.remove('active');
             }
         });
     }
