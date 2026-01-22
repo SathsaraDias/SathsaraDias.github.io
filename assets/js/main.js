@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Active navigation link on scroll and URL hash
     const sections = document.querySelectorAll('.section');
     // Only select nav-links in navbar-nav, exclude brand-link
-    const navLinksList = document.querySelectorAll('.navbar-nav .nav-link');
+    const navLinksList = document.querySelectorAll('.navbar-nav .nav-link:not(.brand-link)');
 
     function updateActiveNav() {
         let current = '';
