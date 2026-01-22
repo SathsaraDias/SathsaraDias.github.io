@@ -146,26 +146,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Active navigation link on scroll
+    // Active navigation link on scroll and URL hash
     const sections = document.querySelectorAll('.section');
     const navLinksList = document.querySelectorAll('.nav-link');
 
     function updateActiveNav() {
         let current = '';
         const scrollY = window.pageYOffset;
+        const hash = window.location.hash.replace('#', '');
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
+        // Check if we have a hash in URL
+        if (hash) {
+            const hashSection = document.getElementById(hash);
+            if (hashSection) {
+                current = hash;
+            }
+        } else {
+            // Otherwise, check scroll position
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+        }
+
+        // Update active states
+        navLinksList.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === `/#${current}` || href === `#${current}` || (current === '' && (href === '/' || href === '/index.html'))) {
+                link.classList.add('active');
             }
         });
 
-        navLinksList.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
+        // Also handle dropdown parent links
+        const dropdownParents = document.querySelectorAll('.nav-item-dropdown > .nav-link');
+        dropdownParents.forEach(parent => {
+            const dropdown = parent.closest('.nav-item-dropdown');
+            const dropdownLinks = dropdown.querySelectorAll('.nav-dropdown-link');
+            let hasActiveChild = false;
+            dropdownLinks.forEach(child => {
+                const childHref = child.getAttribute('href');
+                if (childHref && childHref.includes(`#${current}`)) {
+                    child.classList.add('active');
+                    hasActiveChild = true;
+                } else {
+                    child.classList.remove('active');
+                }
+            });
+            if (hasActiveChild) {
+                parent.classList.add('active');
             }
         });
     }
