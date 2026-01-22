@@ -35,17 +35,45 @@ window.toggleMobileMenu = function() {
     return false;
 };
 
-// Clean URL redirect - Remove index.html from URL
+// URL routing - Map clean URLs to sections
+const urlToSectionMap = {
+    '/': 'about',
+    '/publications': 'publications',
+    '/featured-publications': 'featured-publications',
+    '/conference-papers': 'conference-papers',
+    '/projects': 'projects',
+    '/contact': 'contact'
+};
+
+// Clean URL redirect - Remove index.html from URL and handle routing
 (function() {
     'use strict';
+    const pathname = window.location.pathname;
+    
     // If URL contains index.html, redirect to clean URL
-    if (window.location.pathname.includes('index.html')) {
-        var cleanUrl = window.location.pathname.replace(/index\.html$/, '/') + window.location.search + window.location.hash;
+    if (pathname.includes('index.html')) {
+        var cleanUrl = pathname.replace(/index\.html$/, '/') + window.location.search + window.location.hash;
         if (cleanUrl === '/') {
             window.history.replaceState({}, document.title, '/');
         } else {
             window.location.replace(cleanUrl);
         }
+        return;
+    }
+    
+    // Handle clean URLs - scroll to section on page load
+    if (pathname !== '/' && urlToSectionMap[pathname]) {
+        const sectionId = urlToSectionMap[pathname];
+        setTimeout(function() {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const offsetTop = section.offsetTop - 70;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'instant'
+                });
+            }
+        }, 100);
     }
 })();
 
@@ -146,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Active navigation link on scroll and URL hash
+    // Active navigation link on scroll and URL pathname
     const sections = document.querySelectorAll('.section');
     // Only select nav-links in navbar-nav, exclude brand-link
     const navLinksList = document.querySelectorAll('.navbar-nav .nav-link:not(.brand-link)');
@@ -154,20 +182,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateActiveNav() {
         let current = '';
         const scrollY = window.pageYOffset;
-        const hash = window.location.hash.replace('#', '');
         const pathname = window.location.pathname;
 
         // Check if we're on homepage (no pathname or just /)
         const isHomePage = pathname === '/' || pathname === '/index.html' || pathname.endsWith('/index.html');
 
-        // Check if we have a hash in URL
-        if (hash) {
-            const hashSection = document.getElementById(hash);
-            if (hashSection) {
-                current = hash;
-            }
+        // Get current section from URL pathname
+        if (urlToSectionMap[pathname]) {
+            current = urlToSectionMap[pathname];
         } else if (isHomePage) {
-            // On homepage with no hash, check scroll position
+            // On homepage, check scroll position
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
                 const sectionHeight = section.clientHeight;
@@ -175,6 +199,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     current = section.getAttribute('id');
                 }
             });
+            // If at top of page, default to 'about'
+            if (scrollY < 200 && !current) {
+                current = 'about';
+            }
         }
 
         // First, remove all active states from all nav links
@@ -190,21 +218,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const href = link.getAttribute('href');
             
-            // Handle Home link - only on homepage with no hash
-            if (isHomePage && !hash && !activeLinkFound) {
+            // Handle Home link
+            if (isHomePage && (current === 'about' || current === '' || scrollY < 200)) {
                 if (href === '/' || href === '/index.html' || href === 'index.html') {
-                    // Only activate Home if we're at the top of the page or in about section
-                    if (scrollY < 200 || current === 'about' || current === '') {
-                        link.classList.add('active');
-                        activeLinkFound = true;
-                        return;
-                    }
+                    link.classList.add('active');
+                    activeLinkFound = true;
+                    return;
                 }
             }
             
-            // Handle section links with hash - check exact match
+            // Handle section links with clean URLs
             if (current && !activeLinkFound) {
-                if (href === `/#${current}` || href === `#${current}`) {
+                // Check if href matches the current section
+                const sectionFromUrl = urlToSectionMap[href];
+                if (sectionFromUrl === current) {
                     link.classList.add('active');
                     activeLinkFound = true;
                     return;
@@ -222,14 +249,17 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownLinks.forEach(child => {
                 child.classList.remove('active');
                 const childHref = child.getAttribute('href');
-                if (childHref && current && childHref.includes(`#${current}`)) {
+                const childSection = urlToSectionMap[childHref];
+                if (childSection === current) {
                     child.classList.add('active');
                     hasActiveChild = true;
                 }
             });
             
-            // Only make parent active if it has an active child AND we're not on home
-            if (hasActiveChild && current) {
+            // Check if parent link matches current section
+            const parentHref = parent.getAttribute('href');
+            const parentSection = urlToSectionMap[parentHref];
+            if (parentSection === current || hasActiveChild) {
                 parent.classList.add('active');
             } else {
                 parent.classList.remove('active');
@@ -240,7 +270,55 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
 
-    // Smooth scroll for anchor links
+    // Handle clean URL navigation - intercept clicks and route to sections
+    document.querySelectorAll('a[href^="/"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Only handle clean URLs that map to sections (not external links or other pages)
+            if (urlToSectionMap[href] && href !== '/') {
+                e.preventDefault();
+                const sectionId = urlToSectionMap[href];
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    // Update URL without page reload
+                    window.history.pushState({}, '', href);
+                    // Scroll to section
+                    const offsetTop = section.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    // Update active navigation
+                    updateActiveNav();
+                }
+            }
+        });
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function(e) {
+        const pathname = window.location.pathname;
+        if (urlToSectionMap[pathname]) {
+            const sectionId = urlToSectionMap[pathname];
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const offsetTop = section.offsetTop - 70;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                updateActiveNav();
+            }
+        } else if (pathname === '/') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            updateActiveNav();
+        }
+    });
+
+    // Smooth scroll for hash anchor links (for backward compatibility)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');

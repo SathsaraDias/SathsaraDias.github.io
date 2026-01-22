@@ -238,12 +238,10 @@ a:hover {
 
 .nav-link:hover {
   color: var(--accent);
-  background-color: rgba(255, 215, 0, 0.1);
 }
 
 .nav-link.active {
   color: var(--accent);
-  background-color: rgba(255, 215, 0, 0.15);
   font-weight: 600;
 }
 
@@ -251,12 +249,10 @@ a:hover {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 3px;
+  left: 0;
+  right: 0;
+  height: 2px;
   background-color: var(--accent);
-  border-radius: 2px 2px 0 0;
 }
 
 /* Dropdown Menu */
