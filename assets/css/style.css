@@ -217,22 +217,32 @@ a:hover {
   font-weight: 500;
   transition: var(--transition);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--accent);
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
 .nav-link.active {
   color: var(--accent);
+  background-color: rgba(255, 215, 0, 0.15);
+  font-weight: 600;
 }
 
 .nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
   background-color: var(--accent);
+  border-radius: 2px 2px 0 0;
 }
 
 /* Dropdown Menu */
@@ -288,6 +298,12 @@ a:hover {
 .nav-dropdown-link:hover {
   background: var(--bg-alt);
   color: var(--primary);
+}
+
+.nav-dropdown-link.active {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .nav-toggle {

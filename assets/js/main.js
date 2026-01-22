@@ -35,6 +35,20 @@ window.toggleMobileMenu = function() {
     return false;
 };
 
+// Clean URL redirect - Remove index.html from URL
+(function() {
+    'use strict';
+    // If URL contains index.html, redirect to clean URL
+    if (window.location.pathname.includes('index.html')) {
+        var cleanUrl = window.location.pathname.replace(/index\.html$/, '/') + window.location.search + window.location.hash;
+        if (cleanUrl === '/') {
+            window.history.replaceState({}, document.title, '/');
+        } else {
+            window.location.replace(cleanUrl);
+        }
+    }
+})();
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
