@@ -218,22 +218,16 @@ a:hover {
   transition: var(--transition);
   position: relative;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   display: inline-block;
 }
 
 /* Exclude brand-link from nav-link active styles */
 .brand-link {
   padding: 0;
-  border-radius: 0;
 }
 
 .brand-link.active {
   background-color: transparent !important;
-}
-
-.brand-link.active::after {
-  display: none !important;
 }
 
 .nav-link:hover {
@@ -243,16 +237,6 @@ a:hover {
 .nav-link.active {
   color: var(--accent);
   font-weight: 600;
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--accent);
 }
 
 /* Dropdown Menu */
