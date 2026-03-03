@@ -1,6 +1,6 @@
-# Fix www.diassl.com Configuration
+# Fix diassl.com Configuration
 
-The error you're seeing is because `www.diassl.com` is not configured. GitHub checks both the apex domain (`diassl.com`) and the `www` subdomain (`www.diassl.com`).
+The error you're seeing is because `diassl.com` is not configured. GitHub checks both the apex domain (`diassl.com`) and the `www` subdomain (`diassl.com`).
 
 ## Solution: Add CNAME Record for www Subdomain
 
@@ -52,13 +52,13 @@ You need to add a CNAME record at Porkbun for the `www` subdomain.
 - TXT Record: `_github-pages-challenge-SathsaraDias.diassl.com` (verification)
 
 **⏳ Missing (need to add):**
-- CNAME Record: `www` → `SathsaraDias.github.io` (for www.diassl.com)
+- CNAME Record: `www` → `SathsaraDias.github.io` (for diassl.com)
 
 ## After Adding the CNAME Record:
 
 Both domains will work:
 - ✅ `https://diassl.com` (apex domain - already working)
-- ✅ `https://www.diassl.com` (www subdomain - will work after adding CNAME)
+- ✅ `https://diassl.com` (www subdomain - will work after adding CNAME)
 
 The error message in GitHub should disappear after DNS propagates.
 

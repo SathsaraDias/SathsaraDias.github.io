@@ -23,7 +23,7 @@
 This is a professional academic portfolio website for **Sathsara Dias**, an Applied Mathematician and Data Scientist specializing in Dynamic Mode Decomposition (DMD), reduced-order modeling, machine learning, and computational fluid dynamics. The website serves as a comprehensive showcase of research publications, professional experience, projects, and educational resources.
 
 ### Website URL
-- **Live Site**: https://www.diassl.com
+- **Live Site**: https://diassl.com
 - **Domain**: diassl.com (configured via CNAME)
 
 ### Purpose
@@ -480,7 +480,7 @@ closeAcknowledgements() // Closes modal
   "jobTitle": "Applied Mathematician & Data Scientist",
   "alumniOf": "Clarkson University",
   "knowsAbout": ["DMD", "Machine Learning", ...],
-  "url": "https://www.diassl.com",
+  "url": "https://diassl.com",
   "sameAs": ["GitHub", "LinkedIn", "Google Scholar"]
 }
 ```
@@ -743,7 +743,7 @@ Edit navigation in all HTML files:
 - `FIX_WWW_SUBDOMAIN.md` - Subdomain troubleshooting
 
 ### External Links
-- **Website**: https://www.diassl.com
+- **Website**: https://diassl.com
 - **GitHub**: https://github.com/SathsaraDias
 - **LinkedIn**: https://www.linkedin.com/in/lsldias/
 - **Google Scholar**: https://scholar.google.com/citations?hl=en&tzom=-330&user=iV9RTLMAAAAJ

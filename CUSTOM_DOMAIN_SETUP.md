@@ -41,7 +41,7 @@ You need to add DNS records at your domain registrar (Porkbun) to point your dom
 
 ### Option B: Using CNAME Record (For www subdomain)
 
-If you also want `www.diassl.com` to work:
+If you also want `diassl.com` to work:
 
 1. Add a **CNAME record**:
 
@@ -117,7 +117,7 @@ Once your DNS is configured and GitHub verifies it:
 
 - Keep the `CNAME` file in your repository (don't delete it)
 - Only one domain can be set per GitHub Pages site
-- Both `diassl.com` and `www.diassl.com` will work if configured properly
+- Both `diassl.com` and `diassl.com` will work if configured properly
 - Your site will continue to work at `sathsaradias.github.io` as well
 
 ## Current Status
