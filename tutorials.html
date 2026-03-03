@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="description" content="Tutorials by Dr. Sathsara Dias: step-by-step guides, Jupyter notebooks, and video tutorials on Dynamic Mode Decomposition, data-driven analysis, reduced-order modeling, and machine learning for scientific computing.">
+    <meta name="author" content="Sathsara Dias">
+    <meta name="keywords" content="Sathsara Dias, tutorials, DMD tutorial, Dynamic Mode Decomposition guide, POD tutorial, data science tutorials, machine learning tutorials, Jupyter notebooks, scientific computing, Python tutorials, MATLAB">
+    <meta name="theme-color" content="#1d315a">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tutorials | Sathsara Dias - Applied Mathematician">
+    <meta property="og:description" content="Step-by-step tutorials on DMD, POD, data-driven analysis, and machine learning by Dr. Sathsara Dias.">
+    <meta property="og:url" content="https://diassl.com/tutorials.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sathsara Dias - Applied Mathematician">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://diassl.com/tutorials.html">
+
+    <title>Tutorials | Sathsara Dias - Applied Mathematician & Data Scientist</title>
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="brand-link">
+                    <img src="./assets/img/logo_sd.png" alt="Sathsara Dias - Applied Mathematician and Data Scientist Logo" class="navbar-logo-sd">
+                    <span class="brand-text">Sathsara Dias</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="/publications" class="nav-link">Publications <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="/featured-publications" class="nav-dropdown-link">Featured Publications</a></li>
+                        <li><a href="/conference-papers" class="nav-dropdown-link">Conference Papers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="research-notes.html" class="nav-link">Notes & Code <i class="fas fa-chevron-down"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="research-notes.html" class="nav-dropdown-link">Research Notes</a></li>
+                        <li><a href="tutorials.html" class="nav-dropdown-link active">Tutorials</a></li>
+                        <li><a href="resources.html" class="nav-dropdown-link">Resources</a></li>
+                        <li><a href="resources.html#books" class="nav-dropdown-link">Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="/projects" class="nav-link">Projects</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="section">
+                <h1 class="section-title">Tutorials</h1>
+                <p class="section-description">Step-by-step guides, video tutorials, and interactive Jupyter notebooks covering methods, techniques, and practical applications in data-driven analysis and reduced-order modeling.</p>
+
+                <!-- Tutorials List -->
+                <div class="tutorials-grid">
+                    <div class="tutorial-card placeholder-content">
+                        <h3><i class="fas fa-book-reader"></i> Tutorial Content Coming Soon</h3>
+                        <p>Add your step-by-step tutorials here. Each tutorial can include:</p>
+                        <ul>
+                            <li>Introduction and overview</li>
+                            <li>Step-by-step instructions</li>
+                            <li>Code examples with syntax highlighting</li>
+                            <li>Visual examples and diagrams</li>
+                            <li>Video embeds (YouTube, Vimeo, etc.)</li>
+                            <li>Interactive Jupyter notebook embeds</li>
+                            <li>Practice exercises</li>
+                            <li>Additional resources and references</li>
+                        </ul>
+                    </div>
+
+                    <div class="tutorial-card placeholder-content">
+                        <h3><i class="fas fa-video"></i> Video Tutorials</h3>
+                        <p>Embed video tutorials covering:</p>
+                        <ul>
+                            <li>DMD implementation walkthroughs</li>
+                            <li>POD method explanations</li>
+                            <li>Data processing techniques</li>
+                            <li>Visualization methods</li>
+                            <li>Practical applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="tutorial-card placeholder-content">
+                        <h3><i class="fab fa-python"></i> Interactive Notebooks</h3>
+                        <p>Embed interactive Jupyter notebooks for:</p>
+                        <ul>
+                            <li>Hands-on learning</li>
+                            <li>Interactive demonstrations</li>
+                            <li>Experiment with parameters</li>
+                            <li>Live code execution</li>
+                            <li>Visualization and plots</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sathsara Dias. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

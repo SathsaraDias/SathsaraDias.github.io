@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+User-agent: Googlebot
+Allow: /
+Allow: /assets/img/
+
+Sitemap: https://diassl.com/sitemap.xml
